@@ -1,40 +1,170 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 株式投資スクール Web サイト
 
-## Getting Started
+投資初心者から中級者を対象とした、株式投資を学べるオンラインスクールの Web サイトです。
 
-First, run the development server:
+## 📋 プロジェクト概要
+
+### 目的
+
+- **無料体験セミナーの申込を月間 100 件獲得**
+- 投資初心者が安心して学べる環境を提供
+- 体系的な 15 回のカリキュラムで投資家として自立できるようサポート
+
+### ターゲット
+
+- 投資初心者〜中級者
+- 20〜50 代の社会人
+- NISA 口座を開設したが活用できていない方
+
+### 主要機能
+
+- 無料体験セミナー申込フォーム
+- 15 回の体系的カリキュラム紹介
+- 開催スケジュール検索・絞り込み
+- 受講生の声・成功事例
+- FAQ・ブログ機能
+
+## 🛠️ 技術スタック
+
+- **フレームワーク**: Next.js 14 (Pages Router)
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **データ管理**: ローカル JSON ファイル
+- **バリデーション**: Zod
+- **デプロイ**: Vercel
+
+## 📁 プロジェクト構成
+
+```
+/
+├── docs/                      # 設計ドキュメント
+│   ├── 要件定義.md
+│   ├── 情報設計_サイトマップ.md
+│   ├── コンテンツ設計.md
+│   ├── デザイン指針.md
+│   ├── データ設計.md
+│   └── ルーティング設計.md
+│
+├── data/                      # JSONデータ
+│   ├── events.json            # 開催スケジュール
+│   ├── lessons.json           # カリキュラム
+│   ├── reviews.json           # 受講生の声
+│   ├── faq.json               # よくある質問
+│   └── settings.json          # サイト設定
+│
+├── types/                     # TypeScript型定義
+│   ├── event.ts
+│   ├── lesson.ts
+│   └── ...
+│
+├── lib/                       # ユーティリティ
+│   ├── data-loader.ts         # データ読み込み
+│   └── validators.ts          # Zodバリデーション
+│
+└── pages/                     # ページコンポーネント
+    ├── index.tsx              # トップページ
+    ├── curriculum.tsx         # カリキュラム
+    ├── schedule.tsx           # スケジュール
+    └── ...
+```
+
+## 🚀 開発環境のセットアップ
+
+### 前提条件
+
+- Node.js 18.x 以上
+- npm / yarn / pnpm
+
+### インストール
+
+```bash
+# リポジトリのクローン
+git clone https://github.com/yourusername/kabu-school.git
+cd kabu-school
+
+# 依存関係のインストール
+npm install
+```
+
+### 開発サーバーの起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いて確認できます。
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### ビルド
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+# 本番用ビルド
+npm run build
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+# ビルドの実行
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📄 主要ページ
 
-## Learn More
+| パス          | 説明                | 優先度 |
+| ------------- | ------------------- | ------ |
+| `/`           | トップページ（LP）  | 🔴 高  |
+| `/curriculum` | カリキュラム詳細    | 🔴 高  |
+| `/schedule`   | 開催スケジュール    | 🔴 高  |
+| `/seminar`    | 無料体験セミナー LP | 🔴 高  |
+| `/apply`      | 申込フォーム        | 🔴 高  |
+| `/voice`      | 受講生の声          | 🟡 中  |
+| `/faq`        | よくある質問        | 🟡 中  |
+| `/blog`       | ブログ              | 🟡 中  |
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 デザインコンセプト
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- **テーマ**: 信頼 × 学習
+- **カラー**: ネイビーブルー（#1A3C78）+ 白ベース
+- **トーン**: 清潔感・誠実・知的・落ち着き
+- **フォント**: Noto Sans JP
+- **レスポンシブ**: SP ファースト設計
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📊 KPI
 
-## Deploy on Vercel
+| 指標               | 目標値                | 測定方法            |
+| ------------------ | --------------------- | ------------------- |
+| 無料体験申込率     | 3〜5%                 | GA4 イベント計測    |
+| LP 平均滞在時間    | 60 秒以上             | GA4                 |
+| モバイル速度スコア | 85 以上               | PageSpeed Insights  |
+| 検索流入数         | 月間 1,000 セッション | GA4（6 ヶ月後目標） |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 ドキュメント
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+詳細な設計ドキュメントは `docs/` ディレクトリに格納されています：
+
+1. **要件定義.md** - サイトの目的、ターゲット、機能要件、KPI
+2. **情報設計\_サイトマップ.md** - 全 23 ページの構造とナビゲーション設計
+3. **コンテンツ設計.md** - 各ページの詳細コンテンツと文言
+4. **デザイン指針.md** - カラー、タイポグラフィ、コンポーネント設計
+5. **データ設計.md** - JSON 形式のデータ構造と TypeScript 型定義
+6. **ルーティング設計.md** - Next.js のルーティングとページ骨子
+
+## 🔒 ライセンス
+
+このプロジェクトは **CC BY-NC 4.0**（非商用ライセンス）の下でライセンスされています。
+
+- ✅ 個人的な学習目的での利用可
+- ✅ 教育目的での研究・参照可
+- ❌ 商用目的での使用不可
+
+詳細は [LICENSE](./LICENSE) ファイルをご確認ください。
+
+## 📝 注意事項
+
+- 金融商品取引法に基づくリスク表記を必ず含めてください
+- 「絶対儲かる」などの誇大表現は厳禁です
+- 受講生の声は実在する方の許諾を得て掲載してください
+
+## 🤝 コントリビューション
+
+このプロジェクトは学習・参照目的で公開されています。商用利用をご希望の場合は、事前にご連絡ください。
+
+## 📧 お問い合わせ
+
+プロジェクトに関するご質問は、GitHub Issues までお願いします。
