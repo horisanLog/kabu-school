@@ -1,0 +1,27 @@
+[
+  {
+    "id": "instructor-001",
+    "name": "山田 太郎",
+    "photo": "/images/instructor-yamada.jpg",
+    "title": "チーフ講師 / 元証券アナリスト",
+    "bio": "外資系証券会社で個人投資家向けリサーチに従事。初心者向けの投資教育を10年以上担当。",
+    "specialty": "ファンダメンタル分析"
+  },
+  {
+    "id": "instructor-002",
+    "name": "佐藤 ゆき",
+    "photo": "/images/instructor-sato.jpg",
+    "title": "講師 / CFA協会認定証券アナリスト",
+    "bio": "機関投資家向けの運用コンサルタントを経て、当スクールで講師を担当。実践的なポートフォリオ構築が得意。",
+    "specialty": "ポートフォリオ設計"
+  },
+  {
+    "id": "instructor-003",
+    "name": "井上 みさき",
+    "photo": "/images/instructor-inoue.jpg",
+    "title": "講師 / テクニカルアナリスト",
+    "bio": "FX・株式の専業トレーダーとして経験を積み、テクニカル分析とメンタルコントロールを担当。",
+    "specialty": "テクニカル分析"
+  }
+]
+

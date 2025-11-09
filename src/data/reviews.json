@@ -1,0 +1,54 @@
+[
+  {
+    "id": "review-001",
+    "name": "田中 由美 様",
+    "age": 38,
+    "occupation": "会社員",
+    "photo": "/images/voice-1.jpg",
+    "rating": 5,
+    "commentShort": "NISA口座を開設したものの、何を買えばいいのか分からず不安でしたが、段階的なカリキュラムで自信が付きました。",
+    "commentLong": "NISA口座を開設したものの、何を買えばいいのか全くわかりませんでした。スクールでは基礎から投資判断のフレームまで丁寧に教えていただき、今では月3万円の積立投資を継続できています。",
+    "beforeStatus": "NISA口座を開設したものの未運用。",
+    "afterStatus": "自分で銘柄選定しつつ積立投資を継続中。",
+    "categories": ["beginner", "female", "businessman"],
+    "attendancePeriod": "2025年4月〜8月",
+    "featured": true,
+    "order": 1,
+    "publishedAt": "2025-09-01"
+  },
+  {
+    "id": "review-002",
+    "name": "佐藤 健太 様",
+    "age": 45,
+    "occupation": "自営業",
+    "photo": "/images/voice-2.jpg",
+    "rating": 5,
+    "commentShort": "オンライン受講と録画視聴で、忙しい合間でも学習を継続できました。",
+    "commentLong": "仕事が忙しくオンライン受講を選択。録画でも視聴できるので、自分のペースで学べたのが良かったです。シミュレーションで失敗を経験できたことで、実践でも冷静に判断できるようになりました。",
+    "beforeStatus": "投資に興味はあるが時間が取れず本格的に学べていない。",
+    "afterStatus": "ポートフォリオを自分で設計し、四半期ごとにリバランス。",
+    "categories": ["intermediate", "businessman"],
+    "attendancePeriod": "2025年3月〜7月",
+    "featured": true,
+    "order": 2,
+    "publishedAt": "2025-08-21"
+  },
+  {
+    "id": "review-003",
+    "name": "鈴木 真理子 様",
+    "age": 32,
+    "occupation": "主婦",
+    "photo": "/images/voice-3.jpg",
+    "rating": 4.5,
+    "commentShort": "女性受講生も多く安心。生活に合わせて学べる環境が嬉しいです。",
+    "commentLong": "投資は男性がやるものだと思っていましたが、女性の受講生も多く安心できました。講師の方も丁寧で、初歩的な質問にも親切に答えてくれました。将来の教育資金を計画的に準備できそうです。",
+    "beforeStatus": "教育費の準備に不安を抱えている。",
+    "afterStatus": "つみたて投信と高配当株で長期運用を開始。",
+    "categories": ["female", "beginner"],
+    "attendancePeriod": "2025年5月〜9月",
+    "featured": true,
+    "order": 3,
+    "publishedAt": "2025-09-18"
+  }
+]
+

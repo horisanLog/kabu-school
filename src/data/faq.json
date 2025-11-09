@@ -1,0 +1,48 @@
+[
+  {
+    "id": "faq-001",
+    "category": "content",
+    "categoryLabel": "カリキュラムについて",
+    "question": "投資経験がゼロでも大丈夫ですか？",
+    "answer": "はい、問題ありません。受講生の約70%が投資未経験からスタートしています。投資の基礎から丁寧に解説しますのでご安心ください。",
+    "order": 1,
+    "featured": true
+  },
+  {
+    "id": "faq-002",
+    "category": "format",
+    "categoryLabel": "受講形式について",
+    "question": "オンライン受講と会場受講を選べますか？",
+    "answer": "はい。オンライン（Zoom）と会場受講（東京・大阪）をご用意しています。途中での切り替えも柔軟に対応可能です。",
+    "order": 2,
+    "featured": true
+  },
+  {
+    "id": "faq-003",
+    "category": "support",
+    "categoryLabel": "サポートについて",
+    "question": "受講期間中の質問対応はありますか？",
+    "answer": "受講生専用のコミュニティと質問フォームをご用意しています。講師・チューターが最短1営業日で回答します。",
+    "order": 3,
+    "featured": true
+  },
+  {
+    "id": "faq-004",
+    "category": "fee",
+    "categoryLabel": "料金について",
+    "question": "受講料の分割払いは可能ですか？",
+    "answer": "はい、最大12回までの分割払いに対応しています。クレジットカード決済または教育ローンをご利用いただけます。",
+    "order": 4,
+    "featured": true
+  },
+  {
+    "id": "faq-005",
+    "category": "other",
+    "categoryLabel": "その他",
+    "question": "無料体験セミナー後の勧誘はありますか？",
+    "answer": "強引な勧誘は一切行いません。体験後に個別相談をご希望の方のみ、担当者からご案内を差し上げます。",
+    "order": 5,
+    "featured": true
+  }
+]
+

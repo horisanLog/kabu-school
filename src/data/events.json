@@ -1,0 +1,45 @@
+[
+  {
+    "id": "event-001",
+    "title": "無料体験セミナー（オンライン）",
+    "date": "2025-11-15",
+    "startTime": "19:00",
+    "endTime": "20:30",
+    "location": "online",
+    "venue": "Zoom",
+    "instructor": "山田 太郎",
+    "capacity": 50,
+    "remainingSeats": 24,
+    "status": "available",
+    "entryUrl": "/apply?schedule_id=event-001"
+  },
+  {
+    "id": "event-002",
+    "title": "無料体験セミナー（東京会場）",
+    "date": "2025-11-18",
+    "startTime": "14:00",
+    "endTime": "15:30",
+    "location": "tokyo",
+    "venue": "東京・丸の内教室",
+    "instructor": "佐藤 ゆき",
+    "capacity": 40,
+    "remainingSeats": 8,
+    "status": "few",
+    "entryUrl": "/apply?schedule_id=event-002"
+  },
+  {
+    "id": "event-003",
+    "title": "無料体験セミナー（大阪会場）",
+    "date": "2025-11-22",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "location": "osaka",
+    "venue": "大阪・梅田教室",
+    "instructor": "井上 みさき",
+    "capacity": 35,
+    "remainingSeats": 0,
+    "status": "full",
+    "entryUrl": "/apply?schedule_id=event-003"
+  }
+]
+
