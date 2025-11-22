@@ -16,11 +16,11 @@ export const applyFormSchema = z.object({
     .regex(/^[0-9-]+$/, "数字とハイフンのみで入力してください"),
   scheduleId: z.string().min(1, "希望日時を選択してください"),
   participationType: z.enum(participationTypes, {
-    errorMap: () => ({ message: "参加形態を選択してください" }),
+    message: "参加形態を選択してください",
   }),
   question: z.string().max(500).optional(),
   agreePrivacy: z.literal(true, {
-    errorMap: () => ({ message: "プライバシーポリシーへの同意が必要です" }),
+    message: "プライバシーポリシーへの同意が必要です",
   }),
 })
 

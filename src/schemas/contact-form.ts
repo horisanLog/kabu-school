@@ -14,7 +14,7 @@ export const contactFormSchema = z.object({
   inquiryType: z.enum(inquiryTypes),
   message: z.string().min(10, "10文字以上でご入力ください").max(1000, "1000文字以内で入力してください"),
   agreePrivacy: z.literal(true, {
-    errorMap: () => ({ message: "プライバシーポリシーへの同意が必要です" }),
+    message: "プライバシーポリシーへの同意が必要です",
   }),
 })
 

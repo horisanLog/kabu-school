@@ -25,7 +25,7 @@ const benefits: BenefitItem[] = [
   },
 ]
 
-const iconPaths: Record<string, JSX.Element> = {
+const iconPaths: Record<string, React.ReactElement> = {
   "book-open": (
     <svg
       className="h-8 w-8 text-accent"
