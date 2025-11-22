@@ -1,13 +1,10 @@
-import Link from "next/link"
-
 import type { HeroContent } from "@/types"
 
 interface HeroProps {
   hero: HeroContent
-  ctaLabel: string
 }
 
-export function Hero({ hero, ctaLabel }: HeroProps) {
+export function Hero({ hero }: HeroProps) {
   const [title, highlight] = hero.subtitle.split(" / ")
 
   return (
@@ -24,23 +21,6 @@ export function Hero({ hero, ctaLabel }: HeroProps) {
           <br className="hidden md:block" />
           {highlight}
         </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/seminar"
-            className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:opacity-90"
-          >
-            📝 {ctaLabel}
-          </Link>
-          <Link
-            href="/schedule"
-            className="inline-flex items-center gap-2 rounded-xl border border-gray-200 px-6 py-3 text-base font-semibold text-gray-800 transition hover:border-accent hover:text-accent"
-          >
-            開催スケジュールを見る
-          </Link>
-        </div>
-        {hero.note ? (
-          <p className="mt-6 text-sm text-gray-500">{hero.note}</p>
-        ) : null}
       </div>
     </section>
   )

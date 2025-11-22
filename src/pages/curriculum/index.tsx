@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Link from "next/link"
 import type { GetStaticProps } from "next"
 
 import { getFeaturedFAQs, getLessonsByPhase, getTextbooks } from "@/lib/data-loader"
@@ -9,6 +8,7 @@ import { FAQPreview } from "@/components/home/FAQPreview"
 import { Breadcrumb } from "@/components/ui/Breadcrumb"
 import { PageHero } from "@/components/ui/PageHero"
 import { SectionHeading } from "@/components/ui/SectionHeading"
+import { LineFloatingButton } from "@/components/ui/LineFloatingButton"
 
 interface CurriculumPageProps {
   phases: Record<LessonPhase, Lesson[]>
@@ -61,24 +61,6 @@ const supportItems = [
   },
 ]
 
-const tuitionItems = [
-  {
-    label: "受講料",
-    value: "298,000円（税込）",
-    note: "分割払い（最大12回）に対応",
-  },
-  {
-    label: "入学金",
-    value: "0円",
-    note: "キャンペーン中につき免除",
-  },
-  {
-    label: "教材費",
-    value: "18,000円（税込）",
-    note: "テキスト・演習資料・録画視聴費用を含む",
-  },
-]
-
 const phaseLabel: Record<LessonPhase, string> = {
   basic: "基礎編",
   practical: "実践編",
@@ -91,7 +73,7 @@ export default function CurriculumPage({ phases, textbooks, faqs }: CurriculumPa
   return (
     <>
       <Head>
-        <title>カリキュラム詳細 | 株式投資スクール</title>
+        <title>カリキュラム詳細 | 株式会社EMA</title>
         <meta
           name="description"
           content="全15回の体系的なカリキュラムで初心者から実践まで段階的に学べます。受講後は自分で投資判断を下せる力を習得。"
@@ -226,42 +208,8 @@ export default function CurriculumPage({ phases, textbooks, faqs }: CurriculumPa
         </section>
       ) : null}
 
-      <section className="section bg-white">
-        <div className="container-responsive space-y-6">
-          <SectionHeading
-            title="受講料とお支払い方法"
-            description="無料体験後に受講を決めていただいた方にのみ、正式なお申込み手続きのご案内を差し上げます。"
-          />
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            {tuitionItems.map((item) => (
-              <div key={item.label} className="rounded-2xl bg-gray-50 p-6 shadow-sm">
-                <h3 className="text-sm font-semibold text-gray-900">{item.label}</h3>
-                <p className="mt-3 text-lg font-semibold text-accent">{item.value}</p>
-                {item.note ? <p className="mt-2 text-xs text-gray-500">{item.note}</p> : null}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <FAQPreview faqs={faqs} />
-
-      <section className="bg-accent py-16 text-white md:py-24">
-        <div className="container-responsive text-center">
-          <h2 className="text-3xl font-semibold md:text-4xl">無料体験でカリキュラムを詳しくご説明します</h2>
-          <p className="mt-4 text-sm text-white/80">
-            授業の進め方・教材サンプル・学習サポートについて講師が詳しくご案内。質疑応答の時間もご用意しています。
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/seminar" className="btn-primary bg-white text-accent hover:bg-gray-100">
-              無料体験セミナーの詳細を見る
-            </Link>
-            <Link href="/apply" className="btn-secondary border-white text-white hover:bg-white/10">
-              直接申し込む
-            </Link>
-          </div>
-        </div>
-      </section>
+      <LineFloatingButton />
     </>
   )
 }

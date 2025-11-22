@@ -1,6 +1,5 @@
 import type { ReactNode } from "react"
 
-import { CTAStickyBar } from "@/components/layouts/CTAStickyBar"
 import { Footer } from "@/components/layouts/Footer"
 import { Header } from "@/components/layouts/Header"
 
@@ -16,7 +15,6 @@ export function SiteLayout({ children }: SiteLayoutProps) {
         {children}
       </main>
       <Footer />
-      <CTAStickyBar />
     </div>
   )
 }

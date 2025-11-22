@@ -41,14 +41,14 @@ export default function HtmlSitemapPage() {
   return (
     <>
       <Head>
-        <title>サイトマップ | 株式投資スクール</title>
+        <title>サイトマップ | 株式会社EMA</title>
       </Head>
 
       <section className="section bg-white">
         <div className="container-responsive space-y-6">
           <div>
             <h1 className="text-2xl font-semibold text-gray-900">サイトマップ</h1>
-            <p className="mt-2 text-sm text-gray-600">株式投資スクールの各ページへのリンク一覧です。</p>
+            <p className="mt-2 text-sm text-gray-600">株式会社EMAの各ページへのリンク一覧です。</p>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {pages.map((section) => (

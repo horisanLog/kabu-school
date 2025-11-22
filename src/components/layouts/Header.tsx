@@ -2,12 +2,9 @@ import Link from "next/link"
 import { useState } from "react"
 
 const navItems = [
+  { label: "会社概要", href: "/company" },
   { label: "カリキュラム", href: "/curriculum" },
-  { label: "開催スケジュール", href: "/schedule" },
-  { label: "受講生の声", href: "/voice" },
-  { label: "ブログ", href: "/blog" },
   { label: "FAQ", href: "/faq" },
-  { label: "ログイン", href: "/login" },
 ]
 
 export function Header() {
@@ -16,11 +13,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur">
       <nav className="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-4 md:px-6">
-        <Link href="/" className="text-lg font-semibold text-gray-900">
-          株式投資スクール
+        <Link href="/" className="text-xl font-bold text-gray-900 tracking-tight">
+          株式会社EMA
         </Link>
 
-        <ul className="hidden items-center gap-6 md:flex">
+        <ul className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <li key={item.href}>
               <Link
@@ -32,15 +29,6 @@ export function Header() {
             </li>
           ))}
         </ul>
-
-        <div className="hidden md:flex">
-          <Link
-            href="/seminar"
-            className="btn-primary inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2 text-sm font-semibold text-white shadow transition hover:opacity-90"
-          >
-            無料体験申込
-          </Link>
-        </div>
 
         <button
           type="button"
@@ -68,14 +56,6 @@ export function Header() {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link
-                href="/seminar"
-                className="block rounded-lg bg-accent px-3 py-2 text-center text-sm font-semibold text-white"
-              >
-                無料体験申込
-              </Link>
-            </li>
           </ul>
         </div>
       ) : null}

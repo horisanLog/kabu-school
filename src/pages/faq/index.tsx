@@ -1,11 +1,11 @@
 import Head from "next/head"
-import Link from "next/link"
 import type { GetStaticProps } from "next"
 
 import { getFAQs } from "@/lib/data-loader"
 import type { FAQ } from "@/types"
 
 import { Breadcrumb } from "@/components/ui/Breadcrumb"
+import { LineFloatingButton } from "@/components/ui/LineFloatingButton"
 
 interface FAQPageProps {
   faqs: FAQ[]
@@ -21,7 +21,7 @@ export default function FAQPage({ faqs }: FAQPageProps) {
   return (
     <>
       <Head>
-        <title>よくあるご質問 | 株式投資スクール</title>
+        <title>よくあるご質問 | 株式会社EMA</title>
         <meta
           name="description"
           content="受講前によくいただくご質問と回答をカテゴリ別にまとめました。料金・受講形式・サポート体制などをご確認ください。"
@@ -40,7 +40,7 @@ export default function FAQPage({ faqs }: FAQPageProps) {
           <div>
             <h1 className="text-2xl font-semibold text-gray-900">よくあるご質問</h1>
             <p className="mt-2 text-sm text-gray-600">
-              受講前に多く寄せられるご質問をカテゴリ別に掲載しています。解決しない場合はお問い合わせフォームよりご連絡ください。
+              受講前に多く寄せられるご質問をカテゴリ別に掲載しています。
             </p>
           </div>
 
@@ -63,23 +63,9 @@ export default function FAQPage({ faqs }: FAQPageProps) {
               </div>
             ))}
           </div>
-
-          <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6 shadow-sm">
-            <h2 className="text-lg font-semibold text-gray-900">解決しない場合は</h2>
-            <p className="mt-2 text-sm text-gray-600">
-              個別のご相談はお問い合わせフォームまたは無料体験セミナーにて承っております。お気軽にご連絡ください。
-            </p>
-            <div className="mt-4 flex flex-wrap gap-3 text-sm text-accent">
-              <Link href="/contact" className="btn-primary bg-accent text-white">
-                お問い合わせフォームへ
-              </Link>
-              <Link href="/seminar" className="btn-secondary">
-                セミナーで質問する
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
+      <LineFloatingButton />
     </>
   )
 }

@@ -5,7 +5,7 @@ export default function NotFoundPage() {
   return (
     <>
       <Head>
-        <title>ページが見つかりません | 株式投資スクール</title>
+        <title>ページが見つかりません | 株式会社EMA</title>
       </Head>
       <section className="section bg-white">
         <div className="container-responsive text-center">
