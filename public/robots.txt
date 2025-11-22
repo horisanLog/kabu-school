@@ -1,0 +1,4 @@
+# すべての検索エンジンをブロック
+User-agent: *
+Disallow: /
+

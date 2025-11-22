@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app"
+import Head from "next/head"
 import { Noto_Sans_JP } from "next/font/google"
 
 import "@/styles/globals.css"
@@ -13,12 +14,17 @@ const notoSansJP = Noto_Sans_JP({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div
-      className={`${notoSansJP.variable} font-sans text-gray-800 antialiased`}
-    >
-      <SiteLayout>
-        <Component {...pageProps} />
-      </SiteLayout>
-    </div>
+    <>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div
+        className={`${notoSansJP.variable} font-sans text-gray-800 antialiased`}
+      >
+        <SiteLayout>
+          <Component {...pageProps} />
+        </SiteLayout>
+      </div>
+    </>
   )
 }
